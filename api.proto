@@ -6,6 +6,7 @@ option go_package = "github.com/digital-mob-filecoin/filstats-proto;proto";
 
 service Filstats {
     rpc Register(RegisterRequest) returns (RegisterResponse) {}
+    rpc Heartbeat(HeartbeatRequest) returns (HeartbeatResponse) {}
 }
 
 message RegisterRequest {
@@ -23,4 +24,13 @@ message RegisterResponse {
 
     Status status = 2;
     string message = 3;
+}
+
+message HeartbeatRequest {
+
+}
+
+message HeartbeatResponse {
+    Status status = 1;
+    string message = 2;
 }
