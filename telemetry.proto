@@ -7,14 +7,9 @@ import "api.proto";
 option go_package = "github.com/digital-mob-filecoin/filstats-proto;proto";
 
 service Telemetry {
-    rpc Peers (PeersRequest) returns (DefaultResponse);
+    rpc Peers (PeersRequest) returns (DefaultResponse) {}
 }
 
 message PeersRequest {
     int64 peers = 1;
-}
-
-message DefaultResponse {
-    Status status = 1;
-    string message = 2;
 }
