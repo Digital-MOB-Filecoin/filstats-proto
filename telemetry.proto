@@ -8,8 +8,13 @@ option go_package = "github.com/digital-mob-filecoin/filstats-proto;proto";
 
 service Telemetry {
     rpc Peers (PeersRequest) returns (DefaultResponse) {}
+    rpc MpoolSize (MpoolSizeRequest) returns (DefaultResponse) {}
 }
 
 message PeersRequest {
     int64 peers = 1;
+}
+
+message MpoolSizeRequest {
+    int64 size = 1;
 }

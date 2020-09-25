@@ -13,6 +13,7 @@ service Filstats {
 message RegisterRequest {
     string name = 1;
     string version = 2;
+    string peerId = 3;
 }
 
 enum Status {
