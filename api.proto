@@ -44,6 +44,7 @@ message DefaultResponse {
 message ChainHeadRequest {
     int64 tipsetHeight = 1;
     repeated ChainHeadBlock blocks = 2;
+    string receivedAt = 3;
 }
 
 message ChainHeadBlock {
