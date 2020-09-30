@@ -9,6 +9,7 @@ option go_package = "github.com/digital-mob-filecoin/filstats-proto;proto";
 service Telemetry {
     rpc Peers (PeersRequest) returns (DefaultResponse) {}
     rpc MpoolSize (MpoolSizeRequest) returns (DefaultResponse) {}
+    rpc Syncing (SyncingRequest) returns (DefaultResponse) {}
 }
 
 message PeersRequest {
@@ -17,4 +18,8 @@ message PeersRequest {
 
 message MpoolSizeRequest {
     int64 size = 1;
+}
+
+message SyncingRequest {
+    bool isSyncing = 1;
 }
