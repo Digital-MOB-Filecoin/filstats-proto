@@ -14,6 +14,7 @@ message RegisterRequest {
     string name = 1;
     string version = 2;
     string peerId = 3;
+    string os = 4;
 }
 
 enum Status {
