@@ -8,3 +8,8 @@
 ```bash
 make
 ```
+
+## Import this in your Golang project
+```
+go get -u github.com/digital-mob-filecoin/filstats-proto
+```
