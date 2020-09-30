@@ -10,6 +10,7 @@ service Telemetry {
     rpc Peers (PeersRequest) returns (DefaultResponse) {}
     rpc MpoolSize (MpoolSizeRequest) returns (DefaultResponse) {}
     rpc Syncing (SyncingRequest) returns (DefaultResponse) {}
+    rpc NetworkStoragePower (NSPRequest) returns (DefaultResponse) {}
 }
 
 message PeersRequest {
@@ -22,4 +23,8 @@ message MpoolSizeRequest {
 
 message SyncingRequest {
     bool isSyncing = 1;
+}
+
+message NSPRequest {
+    string power = 1;
 }
