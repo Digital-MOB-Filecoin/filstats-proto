@@ -56,4 +56,5 @@ message ChainHeadBlock {
     string miner = 3;
     int64 numberOfMessages = 4;
     uint64 timestamp = 5;
+    string currentWeight = 6;
 }
